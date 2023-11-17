@@ -125,7 +125,7 @@ Thumbs.db
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/[Ll]ogs/
+
 /[Mm]emoryCaptures/
 /UserSettings/
 
@@ -205,3 +205,4 @@ InitCodeMarker
 
 # Tutorial Framework has a backup option for the project's content, let's ignore the possible backup folder
 /Tutorial Defaults/
+
