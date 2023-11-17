@@ -30,10 +30,10 @@ public class BlinkManager : MonoBehaviour
     public void StartBlink()
     {
         animator.SetTrigger("Close");
-        StartCoroutine(HoldBlink());
+        
     }
 
-    IEnumerator HoldBlink()
+    public IEnumerator HoldBlink()
     {
         isEyeClosed = true;
         yield return new WaitForSeconds(blinkTime);
