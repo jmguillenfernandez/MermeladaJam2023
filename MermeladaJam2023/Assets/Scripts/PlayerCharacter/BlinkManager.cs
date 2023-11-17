@@ -40,8 +40,9 @@ public class BlinkManager : MonoBehaviour
     {
         isEyeClosed = true;
         yield return new WaitForSeconds(blinkTime);
+        isEyeClosed = false;
         animator.SetTrigger("Open");
-        isEyeClosed=false;
+        
     }
 
     public IEnumerator ResetBlink()
