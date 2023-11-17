@@ -11,7 +11,10 @@ public class BlinkManager : MonoBehaviour
     [HideInInspector]
     public bool isEyeClosed = false;
 
-    public bool DEBUG_TEST_BLINK = false;
+    [Header("Debug")]
+    public bool TEST_BLINK = false;
+    public bool ENABLE_AUTOMATIC_BLINK=true;
+    public float timeToBlink = 5f;
 
     private void Awake()
     {
@@ -20,9 +23,9 @@ public class BlinkManager : MonoBehaviour
 
     private void Update()
     {
-        if(DEBUG_TEST_BLINK)
+        if(TEST_BLINK)
         {
-            DEBUG_TEST_BLINK=false;
+            TEST_BLINK=false;
             StartBlink();
         }
     }
@@ -41,4 +44,13 @@ public class BlinkManager : MonoBehaviour
         isEyeClosed=false;
     }
 
+    public IEnumerator ResetBlink()
+    {
+        yield return new WaitForSeconds(timeToBlink);
+
+        if (ENABLE_AUTOMATIC_BLINK)
+        {
+            StartBlink();
+        }
+    }
 }
