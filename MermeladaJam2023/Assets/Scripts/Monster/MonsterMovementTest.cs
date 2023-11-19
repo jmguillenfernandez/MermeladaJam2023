@@ -95,12 +95,12 @@ public class MonsterMovementTest : MonoBehaviour
 
         if(IsVisible() && !IsHiddenByObject())
         {
-            player.GetComponentInChildren<BlinkManager>().directEyeContact = true;
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = false;
         }
 
         else
         {
-            player.GetComponentInChildren<BlinkManager>().directEyeContact = false;
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = true;
         }
 
         if (IsVisible() || eyeState || IsHiddenByObject())

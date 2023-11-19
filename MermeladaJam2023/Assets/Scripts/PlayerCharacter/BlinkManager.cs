@@ -41,7 +41,6 @@ public class BlinkManager : MonoBehaviour
     {
         if (directEyeContact && timeToBlink > minTimeToBlink)
         {
-            Debug.Log("Le estoy mirando y timeToBlink es de " + timeToBlink);
             timeToBlink-=blinkSpeedUpRate;
             if(timeToBlink<minTimeToBlink)
             {
@@ -50,7 +49,6 @@ public class BlinkManager : MonoBehaviour
         }
         else if (!directEyeContact)
         {
-            Debug.Log("He parado de mirar");
             timeToBlink = baseTimeToBlink;
         }
     }
