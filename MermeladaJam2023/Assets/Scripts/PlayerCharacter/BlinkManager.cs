@@ -15,11 +15,13 @@ public class BlinkManager : MonoBehaviour
 
     [Header("Debug")]
     public bool TEST_BLINK = false;
-    public bool ENABLE_AUTOMATIC_BLINK=true;
-    private float baseTimeToBlink;
+    public bool ENABLE_AUTOMATIC_BLINK = true;
+    private float baseTimeToBlink = 5f;
     
     [Range(0.01f,0.1f)]
-    public float blinkSpeedUpRate;
+    public float blinkSpeedUpRate=0.01f;
+
+    private float trueBlinkSpeedUpRate;
 
     public float minTimeToBlink = 1f;
 
@@ -27,6 +29,7 @@ public class BlinkManager : MonoBehaviour
     {
             animator = GetComponent<Animator>();
         baseTimeToBlink = timeToBlink;
+        trueBlinkSpeedUpRate = blinkSpeedUpRate;
     }
 
     private void Update()
@@ -41,7 +44,8 @@ public class BlinkManager : MonoBehaviour
     {
         if (directEyeContact && timeToBlink > minTimeToBlink)
         {
-            timeToBlink-=blinkSpeedUpRate;
+            Debug.Log("Me están mirando y timeToBlink es de " + timeToBlink);
+            timeToBlink-=trueBlinkSpeedUpRate;
             if(timeToBlink<minTimeToBlink)
             {
                 timeToBlink = minTimeToBlink;
