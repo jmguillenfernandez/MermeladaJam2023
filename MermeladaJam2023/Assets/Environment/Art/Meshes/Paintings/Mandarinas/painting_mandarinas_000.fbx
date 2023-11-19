@@ -1,0 +1,788 @@
+; FBX 7.5.0 project file
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7500
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2023
+		Month: 11
+		Day: 19
+		Hour: 17
+		Minute: 3
+		Second: 49
+		Millisecond: 581
+	}
+	Creator: "FBX SDK/FBX Plugins version 2020.3.1"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Meshes\Paintings\Mandarinas\painting_mandarinas_000.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Meshes\Paintings\Mandarinas\painting_mandarinas_000.fbx"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
+			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
+			P: "Original|ApplicationVersion", "KString", "", "", "2023"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "19/11/2023 16:03:49.580"
+			P: "Original|FileName", "KString", "", "", "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Meshes\Paintings\Mandarinas\painting_mandarinas_000.fbx"
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
+			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "2023"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "19/11/2023 16:03:49.580"
+			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\Usuario\Documents\3ds Max 2023"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "D:\JAMS\MEMERLADAJAM_WIP\monster_wip_3.max"
+		}
+	}
+}
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",2
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",6
+		P: "TimeProtocol", "enum", "", "",2
+		P: "SnapOnFrameMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",153953860000
+		P: "CustomFrameRate", "double", "Number", "",-1
+		P: "TimeMarker", "Compound", "", ""
+		P: "CurrentTimeMarker", "int", "Integer", "",-1
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 2820200886656, "", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 21
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 1
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",0
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 1
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 1
+		PropertyTemplate: "FbxSurfaceMaterial" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Unknown"
+				P: "MultiLayer", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 1
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Implementation" {
+		Count: 1
+		PropertyTemplate: "FbxImplementation" {
+			Properties70:  {
+				P: "ShaderLanguage", "KString", "", "", "MentalRaySL"
+				P: "ShaderLanguageVersion", "KString", "", "", ""
+				P: "RenderAPI", "KString", "", "", "MentalRay"
+				P: "RenderAPIVersion", "KString", "", "", ""
+				P: "RootBindingName", "KString", "", "", ""
+				P: "Constants", "Compound", "", ""
+			}
+		}
+	}
+	ObjectType: "BindingTable" {
+		Count: 1
+		PropertyTemplate: "FbxBindingTable" {
+			Properties70:  {
+				P: "TargetName", "KString", "", "", ""
+				P: "TargetType", "KString", "", "", ""
+				P: "CodeAbsoluteURL", "KString", "XRefUrl", "", ""
+				P: "CodeRelativeURL", "KString", "XRefUrl", "", ""
+				P: "CodeTAG", "KString", "", "", "shader"
+				P: "DescAbsoluteURL", "KString", "XRefUrl", "", ""
+				P: "DescRelativeURL", "KString", "XRefUrl", "", ""
+				P: "DescTAG", "KString", "", "", "shader"
+			}
+		}
+	}
+	ObjectType: "CollectionExclusive" {
+		Count: 13
+		PropertyTemplate: "FbxDisplayLayer" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "Show", "bool", "", "",1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 1
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "RelPath", "KString", "XRefUrl", "", ""
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "ClipIn", "KTime", "Time", "",0
+				P: "ClipOut", "KTime", "Time", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "Mute", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "InterlaceMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 2823283513296, "Geometry::", "Mesh" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.882352941176471,0.776470588235294,0.341176470588235
+		}
+		Vertices: *24 {
+			a: 250,250,0,-31.2589416503906,250,0,250,-0.171852111816406,0,-31.2589378356934,-0.171852111816406,0,250,250,-3.5,-31.2589416503906,250,-3.5,250,-0.171852111816406,-3.5,-31.2589378356934,-0.171852111816406,-3.5
+		} 
+		PolygonVertexIndex: *36 {
+			a: 0,1,-4,3,2,-1,7,5,-5,4,6,-8,1,0,-5,4,5,-2,3,1,-6,5,7,-4,2,3,-8,7,6,-3,0,2,-7,6,4,-1
+		} 
+		Edges: *18 {
+			a: 0,1,2,3,4,6,7,8,9,10,13,14,16,20,22,26,28,32
+		} 
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 102
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Normals: *108 {
+				a: 0,0,0.999999940395355,0,0,1,0,0,0.999999940395355,0,0,0.999999940395355,0,0,1,0,0,0.999999940395355,0,0,-0.999999940395355,0,0,-1,0,0,-0.999999940395355,0,0,-0.999999940395355,0,0,-1,0,0,-0.999999940395355,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,-1.52483075055443e-08,0,-1,-1.52483075055443e-08,0,-1,-1.52483075055443e-08,0,-1,-1.52483075055443e-08,0,-1,-1.52483075055443e-08,0,-1,-1.52483075055443e-08,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+			} 
+			NormalsW: *36 {
+				a: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+			} 
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "UVChannel_1"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "IndexToDirect"
+			UV: *8 {
+				a: 1,1,0.437482118606567,1,1,0.499656289815903,0.437482118606567,0.499656289815903
+			} 
+			UVIndex: *36 {
+				a: 0,1,3,3,2,0,3,1,0,0,2,3,1,0,0,0,1,1,3,1,1,1,3,3,2,3,3,3,2,2,0,2,2,2,0,0
+			} 
+		}
+		LayerElementVisibility: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByEdge"
+			ReferenceInformationType: "Direct"
+			Visibility: *18 {
+				a: 1,1,0,1,1,1,1,0,1,1,1,0,1,0,1,0,1,0
+			} 
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			} 
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementVisibility"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 2823561366352, "Model::painting_mandarinas_000", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-109.370529174805,-124.9140625,1.75
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,0
+			P: "MaxHandle", "int", "Integer", "UH",212
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Material: 2823762637584, "Material::Material #44", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",0.5,0.5,0.5
+			P: "DiffuseColor", "ColorRGB", "Color", "",0.5,0.5,0.5
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",1030429932
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-559038463
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|Parameters", "Compound", "", ""
+			P: "3dsMax|ORIGINAL_MTL", "KString", "", "", "PHYSICAL_MTL"
+			P: "3dsMax|Parameters|material_mode", "Integer", "", "A",2
+			P: "3dsMax|Parameters|base_weight", "Float", "", "A",1
+			P: "3dsMax|Parameters|base_color", "ColorAndAlpha", "", "A",0.5,0.5,0.5,1
+			P: "3dsMax|Parameters|reflectivity", "Float", "", "A",1
+			P: "3dsMax|Parameters|roughness", "Float", "", "A",0
+			P: "3dsMax|Parameters|roughness_inv", "Bool", "", "A",0
+			P: "3dsMax|Parameters|metalness", "Float", "", "A",0
+			P: "3dsMax|Parameters|refl_color", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|Parameters|diff_roughness", "Float", "", "A",0
+			P: "3dsMax|Parameters|brdf_mode", "Bool", "", "A",1
+			P: "3dsMax|Parameters|brdf_low", "Float", "", "A",0.05
+			P: "3dsMax|Parameters|brdf_high", "Float", "", "A",1
+			P: "3dsMax|Parameters|brdf_curve", "Float", "", "A",5
+			P: "3dsMax|Parameters|anisotropy", "Float", "", "A",0
+			P: "3dsMax|Parameters|anisoangle", "Float", "", "A",0.25
+			P: "3dsMax|Parameters|aniso_mode", "Integer", "", "A",0
+			P: "3dsMax|Parameters|aniso_channel", "Integer", "", "A",0
+			P: "3dsMax|Parameters|transparency", "Float", "", "A",0
+			P: "3dsMax|Parameters|trans_color", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|Parameters|trans_depth", "Float", "", "A",0
+			P: "3dsMax|Parameters|trans_roughness", "Float", "", "A",0
+			P: "3dsMax|Parameters|trans_roughness_inv", "Bool", "", "A",0
+			P: "3dsMax|Parameters|trans_roughness_lock", "Bool", "", "A",1
+			P: "3dsMax|Parameters|trans_ior", "Float", "", "A",1.52
+			P: "3dsMax|Parameters|thin_walled", "Bool", "", "A",0
+			P: "3dsMax|Parameters|dispersion", "Float", "", "A",0
+			P: "3dsMax|Parameters|trans_scatter_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|Parameters|trans_scatter_aniso", "Float", "", "A",0
+			P: "3dsMax|Parameters|scattering", "Float", "", "A",0
+			P: "3dsMax|Parameters|sss_color", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|Parameters|sss_depth", "Float", "", "A",10
+			P: "3dsMax|Parameters|sss_scale", "Float", "", "A",1
+			P: "3dsMax|Parameters|sss_scatter_color", "ColorAndAlpha", "", "A",100,50,25,1
+			P: "3dsMax|Parameters|emission", "Float", "", "A",1
+			P: "3dsMax|Parameters|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|Parameters|emit_luminance", "Float", "", "A",1500
+			P: "3dsMax|Parameters|emit_kelvin", "Float", "", "A",6500
+			P: "3dsMax|Parameters|coating", "Float", "", "A",0
+			P: "3dsMax|Parameters|coat_color", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|Parameters|coat_roughness", "Float", "", "A",0
+			P: "3dsMax|Parameters|coat_roughness_inv", "Bool", "", "A",0
+			P: "3dsMax|Parameters|coat_affect_color", "Float", "", "A",0.5
+			P: "3dsMax|Parameters|coat_affect_roughness", "Float", "", "A",0.5
+			P: "3dsMax|Parameters|coat_ior", "Float", "", "A",1.52
+			P: "3dsMax|Parameters|coat_anisotropy", "Float", "", "A",0
+			P: "3dsMax|Parameters|coat_anisoangle", "Float", "", "A",0.25
+			P: "3dsMax|Parameters|sheen", "Float", "", "A",0
+			P: "3dsMax|Parameters|sheen_color", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|Parameters|sheen_roughness", "Float", "", "A",0.3
+			P: "3dsMax|Parameters|thin_film", "Float", "", "A",0
+			P: "3dsMax|Parameters|thin_film_thickness", "Float", "", "A",0
+			P: "3dsMax|Parameters|thin_film_ior", "Float", "", "A",1.3
+			P: "3dsMax|Parameters|base_weight_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|base_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|reflectivity_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|refl_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|roughness_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|metalness_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|diff_rough_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|anisotropy_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|aniso_angle_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|transparency_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|trans_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|trans_rough_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|trans_ior_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|scattering_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|sss_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|sss_scale_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|emission_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|coat_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|coat_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|coat_rough_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|displacement_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|cutout_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|coat_aniso_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|coat_aniso_angle_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|sheen_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|sheen_color_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|sheen_rough_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|thin_film_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|thin_film_ior_map", "Reference", "", "A"
+			P: "3dsMax|Parameters|base_weight_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|base_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|reflectivity_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|refl_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|roughness_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|metalness_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|diff_rough_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|anisotropy_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|aniso_angle_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|transparency_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|trans_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|trans_rough_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|trans_ior_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|scattering_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|sss_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|sss_scale_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|emission_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|emit_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|coat_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|coat_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|coat_rough_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|coat_aniso_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|coat_aniso_angle_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|sheen_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|sheen_color_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|sheen_rough_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|thin_film_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|thin_film_ior_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|displacement_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|cutout_map_on", "Bool", "", "A",1
+			P: "3dsMax|Parameters|displacement_map_amt", "Float", "", "A",1
+		}
+	}
+	Video: 2823283512816, "Video::Map #12", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Materials\Textures\Paintings\mandarinas_2.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Materials\Textures\Paintings\mandarinas_2.png"
+		}
+		UseMipMap: 0
+		Filename: "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Materials\Textures\Paintings\mandarinas_2.png"
+		RelativeFilename: "..\..\..\Materials\Textures\Paintings\mandarinas_2.png"
+		Content: ,
+ "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"
+	}
+	Texture: 2823283507536, "Texture::Map #12", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #12"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #12"
+		FileName: "D:\JAMS\MermeladaJam2023\MermeladaJam2023\Assets\Environment\Art\Materials\Textures\Paintings\mandarinas_2.png"
+		RelativeFilename: "..\..\..\Materials\Textures\Paintings\mandarinas_2.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "Alpha_Black"
+		Cropping: 0,0,0,0
+	}
+	Implementation: 2820015477232, "Implementation::Material #44_Implementation", "" {
+		Version: 100
+		Properties70:  {
+			P: "ShaderLanguage", "KString", "", "", "StandardSSL"
+			P: "ShaderLanguageVersion", "KString", "", "", "1.0.1"
+			P: "RenderAPI", "KString", "", "", "OSL"
+			P: "RootBindingName", "KString", "", "", "root"
+		}
+	}
+	BindingTable: 2823553870352, "BindingTable::root 20", "" {
+		Version: 100
+		Properties70:  {
+			P: "TargetName", "KString", "", "", "root"
+			P: "TargetType", "KString", "", "", "shader"
+		}
+		Entry: "3dsMax|Parameters|material_mode", "FbxPropertyEntry", "material_mode", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_weight", "FbxPropertyEntry", "base", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_color", "FbxPropertyEntry", "base_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|reflectivity", "FbxPropertyEntry", "specular", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|roughness", "FbxPropertyEntry", "specular_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|roughness_inv", "FbxPropertyEntry", "roughness_inv", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|metalness", "FbxPropertyEntry", "metalness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|refl_color", "FbxPropertyEntry", "specular_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|diff_roughness", "FbxPropertyEntry", "diffuse_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|brdf_mode", "FbxPropertyEntry", "brdf_mode", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|brdf_low", "FbxPropertyEntry", "brdf_low", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|brdf_high", "FbxPropertyEntry", "brdf_high", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|brdf_curve", "FbxPropertyEntry", "brdf_curve", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|anisotropy", "FbxPropertyEntry", "specular_anisotropy", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|anisoangle", "FbxPropertyEntry", "specular_rotation", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|aniso_mode", "FbxPropertyEntry", "aniso_mode", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|aniso_channel", "FbxPropertyEntry", "aniso_channel", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|transparency", "FbxPropertyEntry", "transmission", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_color", "FbxPropertyEntry", "transmission_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_depth", "FbxPropertyEntry", "transmission_depth", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_roughness", "FbxPropertyEntry", "transmission_extra_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_roughness_inv", "FbxPropertyEntry", "trans_roughness_inv", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_roughness_lock", "FbxPropertyEntry", "trans_roughness_lock", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_ior", "FbxPropertyEntry", "specular_IOR", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_walled", "FbxPropertyEntry", "thin_walled", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|dispersion", "FbxPropertyEntry", "transmisison_dispersion", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_scatter_color", "FbxPropertyEntry", "transmission_scatter", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_scatter_aniso", "FbxPropertyEntry", "transmission_scatter_anisotropy", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|scattering", "FbxPropertyEntry", "subsurface", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_color", "FbxPropertyEntry", "subsurface_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_depth", "FbxPropertyEntry", "sss_depth", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_scale", "FbxPropertyEntry", "subsurface_scale", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_scatter_color", "FbxPropertyEntry", "subsurface_radius", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emission", "FbxPropertyEntry", "emission", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emit_color", "FbxPropertyEntry", "emission_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emit_luminance", "FbxPropertyEntry", "emit_luminance", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emit_kelvin", "FbxPropertyEntry", "emit_kelvin", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coating", "FbxPropertyEntry", "coat", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_color", "FbxPropertyEntry", "coat_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_roughness", "FbxPropertyEntry", "coat_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_roughness_inv", "FbxPropertyEntry", "coat_roughness_inv", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_affect_color", "FbxPropertyEntry", "coat_affect_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_affect_roughness", "FbxPropertyEntry", "coat_affect_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_ior", "FbxPropertyEntry", "coat_IOR", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_anisotropy", "FbxPropertyEntry", "coat_anisotropy", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_anisoangle", "FbxPropertyEntry", "coat_rotation", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen", "FbxPropertyEntry", "sheen", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_color", "FbxPropertyEntry", "sheen_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_roughness", "FbxPropertyEntry", "sheen_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film", "FbxPropertyEntry", "thin_film", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_thickness", "FbxPropertyEntry", "thin_film_thickness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_ior", "FbxPropertyEntry", "thin_film_IOR", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_weight_map", "FbxPropertyEntry", "base", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_color_map", "FbxPropertyEntry", "base_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|reflectivity_map", "FbxPropertyEntry", "specular", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|refl_color_map", "FbxPropertyEntry", "specular_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|roughness_map", "FbxPropertyEntry", "specular_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|metalness_map", "FbxPropertyEntry", "metalness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|diff_rough_map", "FbxPropertyEntry", "diffuse_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|anisotropy_map", "FbxPropertyEntry", "specular_anisotropy", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|aniso_angle_map", "FbxPropertyEntry", "specular_rotation", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|transparency_map", "FbxPropertyEntry", "transmission", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_color_map", "FbxPropertyEntry", "transmission_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_rough_map", "FbxPropertyEntry", "transmission_extra_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_ior_map", "FbxPropertyEntry", "specular_IOR", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|scattering_map", "FbxPropertyEntry", "subsurface", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_color_map", "FbxPropertyEntry", "subsurface_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_scale_map", "FbxPropertyEntry", "subsurface_scale", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emission_map", "FbxPropertyEntry", "emission", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emit_color_map", "FbxPropertyEntry", "emission_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_map", "FbxPropertyEntry", "coat", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_color_map", "FbxPropertyEntry", "coat_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_rough_map", "FbxPropertyEntry", "coat_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|displacement_map", "FbxPropertyEntry", "displacement_map", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|cutout_map", "FbxPropertyEntry", "opacity", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_aniso_map", "FbxPropertyEntry", "coat_anisotropy", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_aniso_angle_map", "FbxPropertyEntry", "coat_rotation", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_map", "FbxPropertyEntry", "sheen", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_color_map", "FbxPropertyEntry", "sheen_color", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_rough_map", "FbxPropertyEntry", "sheen_roughness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_map", "FbxPropertyEntry", "thin_film_thickness", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_ior_map", "FbxPropertyEntry", "thin_film_IOR", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_weight_map_on", "FbxPropertyEntry", "base_weight_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|base_color_map_on", "FbxPropertyEntry", "base_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|reflectivity_map_on", "FbxPropertyEntry", "reflectivity_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|refl_color_map_on", "FbxPropertyEntry", "refl_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|roughness_map_on", "FbxPropertyEntry", "roughness_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|metalness_map_on", "FbxPropertyEntry", "metalness_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|diff_rough_map_on", "FbxPropertyEntry", "diff_rough_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|anisotropy_map_on", "FbxPropertyEntry", "anisotropy_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|aniso_angle_map_on", "FbxPropertyEntry", "aniso_angle_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|transparency_map_on", "FbxPropertyEntry", "transparency_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_color_map_on", "FbxPropertyEntry", "trans_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_rough_map_on", "FbxPropertyEntry", "trans_rough_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|trans_ior_map_on", "FbxPropertyEntry", "trans_ior_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|scattering_map_on", "FbxPropertyEntry", "scattering_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_color_map_on", "FbxPropertyEntry", "sss_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sss_scale_map_on", "FbxPropertyEntry", "sss_scale_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emission_map_on", "FbxPropertyEntry", "emission_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|emit_color_map_on", "FbxPropertyEntry", "emit_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_map_on", "FbxPropertyEntry", "coat_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_color_map_on", "FbxPropertyEntry", "coat_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_rough_map_on", "FbxPropertyEntry", "coat_rough_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_aniso_map_on", "FbxPropertyEntry", "coat_aniso_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|coat_aniso_angle_map_on", "FbxPropertyEntry", "coat_aniso_angle_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_map_on", "FbxPropertyEntry", "sheen_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_color_map_on", "FbxPropertyEntry", "sheen_color_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|sheen_rough_map_on", "FbxPropertyEntry", "sheen_rough_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_map_on", "FbxPropertyEntry", "thin_film_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|thin_film_ior_map_on", "FbxPropertyEntry", "thin_film_ior_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|displacement_map_on", "FbxPropertyEntry", "displacement_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|cutout_map_on", "FbxPropertyEntry", "cutout_map_on", "FbxSemanticEntry"
+		Entry: "3dsMax|Parameters|displacement_map_amt", "FbxPropertyEntry", "displacement_map_amt", "FbxSemanticEntry"
+	}
+	CollectionExclusive: 2819751329312, "DisplayLayer::dioarama_test", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.329411764705882,0.549019607843137,0.882352941176471
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751331616, "DisplayLayer::monster_geo", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.537254901960784,0.0274509803921569,0.227450980392157
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751331808, "DisplayLayer::bones", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.423529411764706,0.0274509803921569,0.529411764705882
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751322016, "DisplayLayer::props", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.83921568627451,0.898039215686275,0.650980392156863
+		}
+	}
+	CollectionExclusive: 2819751324704, "DisplayLayer::tiles", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.345098039215686,0.105882352941176
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751325088, "DisplayLayer::paintings", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.549019607843137,0.345098039215686,0.882352941176471
+		}
+	}
+	CollectionExclusive: 2819751322976, "DisplayLayer::Carven", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.776470588235294,0.882352941176471,0.341176470588235
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751332192, "DisplayLayer::Landscapes", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.898039215686275,0.603921568627451,0.843137254901961
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751332768, "DisplayLayer::Mandarinas", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.580392156862745,0.105882352941176
+		}
+	}
+	CollectionExclusive: 2819751322208, "DisplayLayer::Lands_1", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.529411764705882,0.231372549019608,0.0313725490196078
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751336224, "DisplayLayer::Lands_2", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.105882352941176,0.345098039215686
+			P: "Show", "bool", "", "",0
+		}
+	}
+	CollectionExclusive: 2819751334880, "DisplayLayer::mand_1", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.603921568627451,0.843137254901961,0.898039215686275
+		}
+	}
+	CollectionExclusive: 2819751337952, "DisplayLayer::mand_2", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.56078431372549,0.882352941176471,0.341176470588235
+		}
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	
+	;Model::painting_mandarinas_000, Model::RootNode
+	C: "OO",2823561366352,0
+	
+	;Geometry::, Model::painting_mandarinas_000
+	C: "OO",2823283513296,2823561366352
+	
+	;Material::Material #44, Model::painting_mandarinas_000
+	C: "OO",2823762637584,2823561366352
+	
+	;Texture::Map #12, Material::Material #44
+	C: "OP",2823283507536,2823762637584, "DiffuseColor"
+	
+	;Texture::Map #12, Material::Material #44
+	C: "OP",2823283507536,2823762637584, "3dsMax|Parameters|base_color_map"
+	
+	;Video::Map #12, Texture::Map #12
+	C: "OO",2823283512816,2823283507536
+	
+	;Material::Material #44, Implementation::Material #44_Implementation
+	C: "OO",2823762637584,2820015477232
+	
+	;BindingTable::root 20, Implementation::Material #44_Implementation
+	C: "OO",2823553870352,2820015477232
+	
+	;Model::painting_mandarinas_000, DisplayLayer::mand_1
+	C: "OO",2823561366352,2819751334880
+}
