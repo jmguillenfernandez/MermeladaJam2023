@@ -34,6 +34,8 @@ public class Llavero : MonoBehaviour
             if (tengollavero == true)
             { 
                 anim.SetTrigger("Sacarllaves");
+                llaveactual = llaves[IDkey];
+                llaveInstanciada = Instantiate(llaveactual, llavesTransform);
                 llavesfuera = true;
             }
 
@@ -41,6 +43,7 @@ public class Llavero : MonoBehaviour
         else if (Mouse.current.rightButton.wasReleasedThisFrame)
         {
             anim.SetTrigger("Guardarllaves");
+            Destroy(llaveInstanciada);
             llavesfuera = false;
         }
 
