@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     //MODO ALARMA
     public bool Bloqueo;
-    public Animator[] puertasBloqueo;
+    public GameObject[] puertasBloqueo;
 
     private void Start()
     {
@@ -66,17 +66,17 @@ public class GameManager : MonoBehaviour
     //ALARMA
     public void Bloquear()
     {
-        foreach (Animator anim in puertasBloqueo)
+        foreach (GameObject anim in puertasBloqueo)
         {
-            anim.SetTrigger("Cerrar");
+            anim.GetComponentInChildren<Animator>().SetTrigger("Cerrar");
         }
         Bloqueo = true;
     }
     public void Desbloquear()
     {
-        foreach (Animator anim in puertasBloqueo)
+        foreach (GameObject anim in puertasBloqueo)
         {
-            anim.SetTrigger("Abrir");
+            anim.GetComponentInChildren<Animator>().SetTrigger("Abrir");
         }
         Bloqueo = false;
     }
