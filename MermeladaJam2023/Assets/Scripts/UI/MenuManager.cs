@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,16 @@ public class MenuManager : MonoBehaviour
 
     public TMPro.TMP_Dropdown resolutionDropdown;
 
+    public static bool GameIsPaused = false;
+
+    public GameObject pauseMenuUI;
+
+    public FirstPersonController fpc;
+
     private Resolution[] resolutions;
 
-    private void Start()
+    private float currentMouseSensibility;
+    private void OnEnable()
     {
         resolutions = Screen.resolutions;
 
@@ -43,9 +51,52 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        fpc.RotationSpeed = currentMouseSensibility;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        GameIsPaused =false;
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        currentMouseSensibility = fpc.RotationSpeed;
+        fpc.RotationSpeed= 0f;
+        Cursor.visible = true;
+        Cursor.lockState= CursorLockMode.None;
+        GameIsPaused = true;
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void GoToMenu()
+    {
+        Time.timeScale = 1f;
+        fpc.RotationSpeed = currentMouseSensibility;
+        SceneManager.LoadScene(0);
     }
 
     public void ExitGame()
@@ -71,5 +122,10 @@ public class MenuManager : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void SetMouseSensibility(float sensibility)
+    {
+        fpc.RotationSpeed= sensibility;
     }
 }
