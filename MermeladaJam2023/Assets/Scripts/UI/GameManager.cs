@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private float currentPlayerSprint;
     public static bool GameIsPaused = false;
 
+    public Scene Menu, Vestibulo, Baños, SalaCarven, Garita, Columnas, Sotano, Salas;
 
     //MODO ALARMA
     public bool Bloqueo;
