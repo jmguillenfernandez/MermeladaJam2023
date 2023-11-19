@@ -1428,6 +1428,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1570383550}
   cam: {fileID: 1814458913}
+  slowDownRange: 15
+  farSpeed: 40
+  farAcceleration: 20
+  nearSpeed: 20
+  nearAcceleration: 10
   agent: {fileID: 1184734875}
   slipperyMonster: 0
 --- !u!195 &1184734875

@@ -9,12 +9,22 @@ public class MonsterMovementTest : MonoBehaviour
 
     public Camera cam;
 
+    public float slowDownRange;
+
+    [Header("Mobility values")]
+    public float farSpeed;
+    public float farAcceleration;
+    public float nearSpeed;
+    public float nearAcceleration;
+
+
     [HideInInspector]
     public NavMeshAgent agent;
     Collider col;
     Ray ray;
     RaycastHit hit;
     float dist;
+    float distance;
 
     [Header("DEBUG")]
     public bool slipperyMonster = false;
@@ -23,6 +33,12 @@ public class MonsterMovementTest : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         col = GetComponent<Collider>();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, slowDownRange);
     }
 
     private bool IsVisible()
@@ -53,6 +69,19 @@ public class MonsterMovementTest : MonoBehaviour
     {
         IsHiddenByObject();
         bool eyeState = player.GetComponentInChildren<BlinkManager>().isEyeClosed;
+
+        distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+        if(distance < slowDownRange)
+        {
+            agent.speed = nearSpeed;
+            agent.acceleration = nearAcceleration;
+        }
+        else
+        {
+            agent.speed = farSpeed;
+            agent.acceleration = farAcceleration;
+        }
 
         if (IsVisible() || eyeState || IsHiddenByObject())
         {
