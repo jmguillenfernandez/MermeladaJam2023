@@ -41,6 +41,14 @@ public class MonsterMovementTest : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, slowDownRange);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == player)
+        {
+            Debug.Log("Death");
+        }
+    }
+
     private bool IsVisible()
     {
         var bounds = col.bounds;

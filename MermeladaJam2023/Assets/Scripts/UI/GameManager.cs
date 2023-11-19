@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public FirstPersonController fpc;
     private float currentMouseSensibility;
+    private float currentPlayerSpeed;
+    private float currentPlayerSprint;
     public static bool GameIsPaused = false;
+
 
     //MODO ALARMA
     public bool Bloqueo;
@@ -82,7 +85,22 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void LockPlayer()
+    {
+        currentMouseSensibility = fpc.RotationSpeed;
+        currentPlayerSpeed = fpc.MoveSpeed;
+        currentPlayerSprint= fpc.SprintSpeed;
+        fpc.RotationSpeed = 0f;
+        fpc.MoveSpeed = 0f;
+        fpc.SprintSpeed = 0f;
+    }
 
+    public void UnlockPlayer()
+    {
+        fpc.RotationSpeed = currentMouseSensibility;
+        fpc.MoveSpeed = currentPlayerSpeed;
+        fpc.SprintSpeed = currentPlayerSprint;
+    }
 
     public void GoToMenu()
     {
