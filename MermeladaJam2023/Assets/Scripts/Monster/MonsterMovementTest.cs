@@ -93,6 +93,16 @@ public class MonsterMovementTest : MonoBehaviour
             agent.acceleration = farAcceleration;
         }
 
+        if(IsVisible() && !IsHiddenByObject())
+        {
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = true;
+        }
+
+        else
+        {
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = false;
+        }
+
         if (IsVisible() || eyeState || IsHiddenByObject())
         {
             agent.isStopped = false;
