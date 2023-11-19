@@ -8,13 +8,39 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+    public bool TESTMODE;
+
+
     public GameObject pauseMenuUI;
     public FirstPersonController fpc;
     private float currentMouseSensibility;
     public static bool GameIsPaused = false;
 
+    //MODO ALARMA
+    public bool Bloqueo;
+    public Animator[] puertasBloqueo;
+
+    private void Start()
+    {
+        Bloqueo = false;
+    }
     private void Update()
     {
+        // Todo lo que esta en testmode es para que nosotros probemos cosas
+        if (TESTMODE)
+        {
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                Bloquear();
+            }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                Desbloquear();
+            }
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -36,6 +62,27 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    //ALARMA
+    public void Bloquear()
+    {
+        foreach (Animator anim in puertasBloqueo)
+        {
+            anim.SetTrigger("Cerrar");
+        }
+        Bloqueo = true;
+    }
+    public void Desbloquear()
+    {
+        foreach (Animator anim in puertasBloqueo)
+        {
+            anim.SetTrigger("Abrir");
+        }
+        Bloqueo = false;
+    }
+
+
+
 
     public void GoToMenu()
     {
