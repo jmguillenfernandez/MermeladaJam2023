@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MonsterMovementTest : MonoBehaviour
 {
@@ -39,6 +40,15 @@ public class MonsterMovementTest : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, slowDownRange);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == player)
+        {
+            Debug.Log("Death");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private bool IsVisible()
@@ -81,6 +91,16 @@ public class MonsterMovementTest : MonoBehaviour
         {
             agent.speed = farSpeed;
             agent.acceleration = farAcceleration;
+        }
+
+        if(IsVisible() && !IsHiddenByObject())
+        {
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = false;
+        }
+
+        else
+        {
+            player.GetComponentInChildren<BlinkManager>().directEyeContact = true;
         }
 
         if (IsVisible() || eyeState || IsHiddenByObject())

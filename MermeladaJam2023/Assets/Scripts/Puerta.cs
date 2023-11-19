@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Puerta : MonoBehaviour
 {
     public bool abierta;
     public int IDDoor;
     public Collider colliderpuerta;
+    public Animator anim;
     public Llavero llavero;
+
+    public
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -46,7 +49,17 @@ public class Puerta : MonoBehaviour
     {
         Debug.Log("puerta " + IDDoor + " abierta");
         abierta = true;
-       colliderpuerta.enabled = false;
+
+        if(colliderpuerta != null)
+        {
+            colliderpuerta.enabled = false;
+        }
+      
+
+        if (anim != null)
+        {
+            anim.SetBool("Abrir", true);
+        }
         if(llavero.TutorialLlavero == true)
         {
             llavero.TutorialLlavero = false;
