@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MonsterMovementTest : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class MonsterMovementTest : MonoBehaviour
         if (collision.gameObject == player)
         {
             Debug.Log("Death");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
