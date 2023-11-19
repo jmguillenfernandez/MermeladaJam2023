@@ -9,13 +9,13 @@ public class MonsterMovementTest : MonoBehaviour
 
     public Camera cam;
 
-    public float slowDownRange;
+    public float slowDownRange = 15;
 
     [Header("Mobility values")]
-    public float farSpeed;
-    public float farAcceleration;
-    public float nearSpeed;
-    public float nearAcceleration;
+    public float farSpeed = 40;
+    public float farAcceleration = 20;
+    public float nearSpeed = 20;
+    public float nearAcceleration = 10;
 
 
     [HideInInspector]
