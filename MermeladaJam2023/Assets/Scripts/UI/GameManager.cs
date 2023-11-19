@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
     public bool Bloqueo;
     public GameObject[] puertasBloqueo;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     private void Start()
     {
         Bloqueo = false;
@@ -66,7 +71,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //ALARMA
+    #region Alarma
     public void Bloquear()
     {
         foreach (GameObject anim in puertasBloqueo)
@@ -83,8 +88,9 @@ public class GameManager : MonoBehaviour
         }
         Bloqueo = false;
     }
+    #endregion
 
-
+    #region Bloqueo de control del jugador
     public void LockPlayer()
     {
         currentMouseSensibility = fpc.RotationSpeed;
@@ -101,6 +107,7 @@ public class GameManager : MonoBehaviour
         fpc.MoveSpeed = currentPlayerSpeed;
         fpc.SprintSpeed = currentPlayerSprint;
     }
+    #endregion
 
     public void GoToMenu()
     {
@@ -109,6 +116,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    #region Pause
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -129,4 +137,5 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         GameIsPaused = true;
     }
+    #endregion
 }
