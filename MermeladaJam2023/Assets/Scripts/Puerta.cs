@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Puerta : MonoBehaviour
 {
     public bool abierta;
@@ -9,6 +9,8 @@ public class Puerta : MonoBehaviour
     public Collider colliderpuerta;
     public Animator anim;
     public Llavero llavero;
+
+    public
     void Start()
     {
         anim = GetComponentInChildren<Animator>();

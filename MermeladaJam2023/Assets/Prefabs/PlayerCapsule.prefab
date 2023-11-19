@@ -904,6 +904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8778426d61a1940a313a61af7aa2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controlPuertas: {fileID: 0}
+  digitoActual: 
+  maxRaycastDistance: 5
 --- !u!1 &5393215578589016642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1055,7 @@ Transform:
   - {fileID: 895050812}
   - {fileID: 1399273776}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &8616685848737228382
 CharacterController:

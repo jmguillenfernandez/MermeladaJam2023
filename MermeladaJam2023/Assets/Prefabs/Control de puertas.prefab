@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 9038982639585380548}
   - component: {fileID: 6187197007114772498}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
+  m_Name: Boton Rojo
+  m_TagString: BotonRojo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -774,7 +774,7 @@ Transform:
   - {fileID: 8883954578475783355}
   - {fileID: 6513706577370725120}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1226870768
 MonoBehaviour:
