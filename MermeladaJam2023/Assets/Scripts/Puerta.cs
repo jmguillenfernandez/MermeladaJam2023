@@ -7,6 +7,7 @@ public class Puerta : MonoBehaviour
     public bool abierta;
     public int IDDoor;
     public Collider colliderpuerta;
+    public Llavero llavero;
     void Start()
     {
         
@@ -22,9 +23,10 @@ public class Puerta : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            if(col.GetComponent<Llavero>().tengollavero == true)
+           llavero = col.GetComponent<Llavero>();
+            if(llavero.tengollavero == true)
             {
-                if(col.GetComponent<Llavero>().IDkey == IDDoor)
+                if(llavero.IDkey == IDDoor)
                 {
                     AbrirPuerta();
                 }
@@ -45,6 +47,12 @@ public class Puerta : MonoBehaviour
         Debug.Log("puerta " + IDDoor + " abierta");
         abierta = true;
        colliderpuerta.enabled = false;
+        if(llavero.TutorialLlavero == true)
+        {
+            llavero.TutorialLlavero = false;
+            llavero.TutruletaText.SetActive(false);
+            llavero.TutsacarllavesText.SetActive(false);
+        }
         //sonido abierta
         //
     }

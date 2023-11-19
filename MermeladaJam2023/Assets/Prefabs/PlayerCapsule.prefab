@@ -1131,6 +1131,9 @@ MonoBehaviour:
   - {fileID: 6063973223239930932, guid: 1c9dc8983ecc26542a2afeb7558fae4c, type: 3}
   - {fileID: 125894261724881575, guid: d26b860a3ba0c7b4b8ff6cce7e07c3b1, type: 3}
   - {fileID: 2890909893733617249, guid: 5c24a8d1a9fec7247a8f3192c3963a60, type: 3}
+  TutorialLlavero: 1
+  TutsacarllavesText: {fileID: 34096433}
+  TutruletaText: {fileID: 492718893}
 --- !u!136 &466281909
 CapsuleCollider:
   m_ObjectHideFlags: 0

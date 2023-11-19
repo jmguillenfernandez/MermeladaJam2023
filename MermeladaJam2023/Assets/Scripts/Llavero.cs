@@ -11,6 +11,9 @@ public class Llavero : MonoBehaviour
     public Transform llavesTransform;
     public GameObject llaveactual,llaveInstanciada;
     public GameObject[] llaves;
+    //TUTORIAL
+    public bool TutorialLlavero;
+    public GameObject TutsacarllavesText, TutruletaText;
     void Start()
     {
         llaveactual = null;
@@ -21,18 +24,16 @@ public class Llavero : MonoBehaviour
     {
         float scrollValue = Mouse.current.scroll.y.ReadValue();
 
-        /* if (Input.GetKeyDown(KeyCode.L))
-         {
-             Debug.Log("he pulsado L");
-             if (tengollavero == true)
-             {
-                 anim.SetTrigger("Sacarllaves");
-             }
-         }*/
+       
         if (Mouse.current.rightButton.wasPressedThisFrame)
         {
             if (tengollavero == true)
             { 
+                if(TutorialLlavero == true)
+                {
+                    TutruletaText.SetActive(true);
+                    TutsacarllavesText.SetActive(false);
+                }
                 anim.SetTrigger("Sacarllaves");
                 llaveactual = llaves[IDkey];
                 llaveInstanciada = Instantiate(llaveactual, llavesTransform);
@@ -42,6 +43,11 @@ public class Llavero : MonoBehaviour
         }
         else if (Mouse.current.rightButton.wasReleasedThisFrame)
         {
+            if (TutorialLlavero == true)
+            {
+                TutruletaText.SetActive(false);
+                TutsacarllavesText.SetActive(true);
+            }
             anim.SetTrigger("Guardarllaves");
             Destroy(llaveInstanciada);
             llavesfuera = false;

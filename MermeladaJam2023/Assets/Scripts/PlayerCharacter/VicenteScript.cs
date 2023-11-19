@@ -30,6 +30,7 @@ public class VicenteScript : MonoBehaviour
         if(other.gameObject.tag == "llavero")
         {
             llavero.tengollavero = true;
+            llavero.TutsacarllavesText.SetActive(true);
             Destroy(other.gameObject);
         }
     }
