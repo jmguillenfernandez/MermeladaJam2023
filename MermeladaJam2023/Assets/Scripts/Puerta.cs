@@ -6,7 +6,9 @@ public class Puerta : MonoBehaviour
 {
     public GameManager GM;
 
+    public bool PuertaInMapa;
     public bool abierta;
+
     public int IDDoor;
     public Collider colliderpuerta;
     public Animator anim;
@@ -16,10 +18,19 @@ public class Puerta : MonoBehaviour
     public int DestinoIndex;
     public int puntoDeSpawn;
 
+    // inmapa
+    public GameObject spawnpoint;
+    public GameObject Player;
+
 
     void Start()
     {
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if(PuertaInMapa == true)
+        {
+            Player = GameObject.Find("PlayerCapsule");
+        }
+           
+    GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -33,30 +44,38 @@ public class Puerta : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            if (abierta == true)
+
+            if (PuertaInMapa == true)
             {
-                if (GM != null)
-                { 
-                GM.puntosdepawn = puntoDeSpawn;
-            }
-                
                 Destino();
-            }
-           llavero = col.GetComponent<Llavero>();
-            if(llavero.tengollavero == true)
-            {
-                if(llavero.IDkey == IDDoor)
-                {
-                    AbrirPuerta();
-                }
-                else
-                {
-                    LLaveIncorrecta();
-                }
             }
             else
             {
-                Debug.Log("No tienes llaves");
+                if (abierta == true)
+                {
+                    if (GM != null)
+                    {
+                        GM.puntosdepawn = puntoDeSpawn;
+                    }
+
+                    Destino();
+                }
+                llavero = col.GetComponent<Llavero>();
+                if (llavero.tengollavero == true)
+                {
+                    if (llavero.IDkey == IDDoor)
+                    {
+                        AbrirPuerta();
+                    }
+                    else
+                    {
+                        LLaveIncorrecta();
+                    }
+                }
+                else
+                {
+                    Debug.Log("No tienes llaves");
+                }
             }
         }
     }
@@ -92,6 +111,14 @@ public class Puerta : MonoBehaviour
 
     public void Destino()
     {
-        SceneManager.LoadScene(DestinoIndex);
+        if (PuertaInMapa == false)
+        {
+            SceneManager.LoadScene(DestinoIndex);
+        }
+        else
+        {
+            Player.transform.position = spawnpoint.transform.position;
+            Player.transform.rotation = spawnpoint.transform.rotation;
+        }
     }
 }
