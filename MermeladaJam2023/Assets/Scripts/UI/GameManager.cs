@@ -54,15 +54,15 @@ public class GameManager : MonoBehaviour
     {
         Bloqueo = false;
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
-       // fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+        //SceneManager.sceneLoaded += OnSceneLoaded;
+       fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
         Baal = GameObject.Find("SM_Monster"); 
         Baal.SetActive(MonstruoActivo);
 
     }
     void OnSceneLoaded(Scene scene,LoadSceneMode mode)
     {
-        fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+       // fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
         Baal = GameObject.Find("SM_Monster");
         Baal.SetActive(MonstruoActivo);
 
