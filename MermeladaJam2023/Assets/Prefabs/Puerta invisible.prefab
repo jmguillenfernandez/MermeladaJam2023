@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 65047876}
   - component: {fileID: 65047875}
   m_Layer: 0
-  m_Name: Puerta
+  m_Name: Puerta invisible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7182894024010132662}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &65047876
 MonoBehaviour:
@@ -73,8 +73,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.6374922}
-  m_Center: {x: 0, y: 0, z: -0.008210659}
+  m_Size: {x: 4.894212, y: 1, z: 0.6374922}
+  m_Center: {x: 0.378613, y: 0, z: -0.008210659}
 --- !u!1 &7182894024010132663
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7182894024010132663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
