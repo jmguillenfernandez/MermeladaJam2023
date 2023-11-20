@@ -46,7 +46,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.922559, b: 0.5970096, a: 1}
   m_Intensity: 1.05
-  m_Range: 10
+  m_Range: 2.49
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -87,7 +87,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.34
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -149,7 +149,7 @@ Transform:
   - {fileID: 3247986163384215204}
   - {fileID: 3316605097788776539}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3069646564941824335
 PrefabInstance:
