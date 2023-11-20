@@ -9,7 +9,15 @@ public class BaalEvent : MonoBehaviour
     public GameObject pose1, pose2, baal;
     public GameObject[] luces;
     public float TiempoOscuro;
+    public GameObject trueFrame;
+    bool entered = false;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        GM = FindObjectOfType<GameManager>();
+    }
+
     void Start()
     {
         pose1.SetActive(false);
@@ -25,7 +33,13 @@ public class BaalEvent : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            CuadroAnimator.SetBool("empieza", true);
+            if (!entered)
+            {
+                entered = true;
+                trueFrame.SetActive(false);
+                CuadroAnimator.SetBool("empieza", true);
+            }
+            
         }
     }
     public void Oscuro1()
@@ -116,6 +130,8 @@ public class BaalEvent : MonoBehaviour
 
         }
         baal.SetActive(true);
+        GM.Bloqueo = true;
+        GM.MonstruoActivo = true;
        
     }
 }
