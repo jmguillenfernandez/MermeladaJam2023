@@ -25,9 +25,24 @@ public class GameManager : MonoBehaviour
     public bool Bloqueo;
     public GameObject[] puertasBloqueo;
 
+    //EVENTOS
+    public bool Introterminada;
+
+    //TRANSICION
+    public int puntosdepawn;
+
+    public static GameManager GameMan;
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        if(GameMan != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            GameMan = this;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

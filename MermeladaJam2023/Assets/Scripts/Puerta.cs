@@ -4,15 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Puerta : MonoBehaviour
 {
+    public GameManager GM;
+
     public bool abierta;
     public int IDDoor;
     public Collider colliderpuerta;
     public Animator anim;
     public Llavero llavero;
 
-    public
+    //Destino
+    public int DestinoIndex;
+    public int puntoDeSpawn;
+
+
     void Start()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -26,6 +33,12 @@ public class Puerta : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            if(abierta == true)
+            { 
+                 GM.puntosdepawn = puntoDeSpawn;
+                
+                Destino();
+            }
            llavero = col.GetComponent<Llavero>();
             if(llavero.tengollavero == true)
             {
@@ -72,5 +85,10 @@ public class Puerta : MonoBehaviour
     public void LLaveIncorrecta()
     {
         Debug.Log("llave incorrecta");
+    }
+
+    public void Destino()
+    {
+        SceneManager.LoadScene(DestinoIndex);
     }
 }
