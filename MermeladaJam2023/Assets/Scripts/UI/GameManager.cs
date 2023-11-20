@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
 
     public Scene Menu, Vestibulo, Baños, SalaCarven, Garita, Columnas, Sotano, Salas;
 
+    [Header("MusicList")]
+    public MusicList musicList;
+
     //MODO ALARMA
     public bool Bloqueo;
     public GameObject[] puertasBloqueo;

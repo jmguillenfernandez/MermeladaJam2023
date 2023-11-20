@@ -127,6 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8833108107524417122}
+  - component: {fileID: 950370235673539182}
   m_Layer: 0
   m_Name: Ceiling_light_baked
   m_TagString: Untagged
@@ -151,6 +152,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950370235673539182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856045764482976282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe70b6df5b22eb408500e44853afa45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFlicker: 0
+  flickerPercent: 0
+  flickerSpeedMin: 0
+  flickerSpeedMax: 0
+  flickerCooldown: 0
 --- !u!1001 &3069646564941824335
 PrefabInstance:
   m_ObjectHideFlags: 0
