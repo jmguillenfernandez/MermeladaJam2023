@@ -1,3 +1,5 @@
+using Cinemachine;
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +41,8 @@ public class MonsterMovementTest : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         col = GetComponent<Collider>();
         meshFilter = GetComponent<MeshFilter>();
+        player = FindObjectOfType<FirstPersonController>().gameObject;
+        cam = FindObjectOfType<CinemachineBrain>().gameObject.GetComponent<Camera>();
     }
 
     private void OnDrawGizmos()
@@ -47,13 +51,12 @@ public class MonsterMovementTest : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, slowDownRange);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Death()
     {
-        if (collision.gameObject == player)
-        {
             Debug.Log("Death");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+            FindObjectOfType<GameManager>().Bloqueo = false;
+            FindObjectOfType<GameManager>().MonstruoActivo = false;
+            SceneManager.LoadScene(0);
     }
 
     private bool IsVisible()
@@ -92,6 +95,11 @@ public class MonsterMovementTest : MonoBehaviour
         bool eyeState = player.GetComponentInChildren<BlinkManager>().isEyeClosed;
 
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+        if (distance < 4.5f)
+        {
+            Death();
+        }
 
         if(distance < slowDownRange)
         {
