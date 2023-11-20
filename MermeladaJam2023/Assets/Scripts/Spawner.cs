@@ -8,16 +8,32 @@ public class Spawner : MonoBehaviour
     public GameObject Player;
     public GameObject[] PuntoDeSpawn;
     public int indexSpawn;
+    public float tiempoSpawn = 0.1f;
+
+    private void Awake()
+    {   Player = GameObject.Find("PlayerCapsule");
+         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+       
+    }
     void Start()
     {
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        Player = GameObject.Find("PlayerCapsule");
+       StartCoroutine (Spawnear());
+        
+    }
+
+    IEnumerator Spawnear()
+    {
+        yield return new WaitForSeconds(tiempoSpawn);
+        InstanciarPlayer();
+    }
+    public void InstanciarPlayer()
+    {
         indexSpawn = GM.puntosdepawn;
         Player.transform.position = PuntoDeSpawn[indexSpawn].transform.position;
         Player.transform.rotation = PuntoDeSpawn[indexSpawn].transform.rotation;
-    }
 
-    // Update is called once per frame
+    }
+    
     void Update()
     {
         
