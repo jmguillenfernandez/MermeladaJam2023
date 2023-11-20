@@ -33,9 +33,12 @@ public class Puerta : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            if(abierta == true)
-            { 
-                 GM.puntosdepawn = puntoDeSpawn;
+            if (abierta == true)
+            {
+                if (GM != null)
+                { 
+                GM.puntosdepawn = puntoDeSpawn;
+            }
                 
                 Destino();
             }

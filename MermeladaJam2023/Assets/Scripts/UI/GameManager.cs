@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     //MODO ALARMA
     public bool Bloqueo;
     public GameObject[] puertasBloqueo;
+    public bool MonstruoActivo;
+    public GameObject Baal;
 
     //EVENTOS
     public bool Introterminada;
@@ -48,6 +50,19 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Bloqueo = false;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+        Baal = GameObject.Find("SM_Monster"); 
+        Baal.SetActive(MonstruoActivo);
+
+    }
+    void OnSceneLoaded(Scene scene,LoadSceneMode mode)
+    {
+        fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+        Baal = GameObject.Find("SM_Monster");
+        Baal.SetActive(MonstruoActivo);
+
     }
     private void Update()
     {
@@ -135,7 +150,10 @@ public class GameManager : MonoBehaviour
     #region Pause
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(false);
+        }
         Time.timeScale = 1f;
         fpc.RotationSpeed = currentMouseSensibility;
         Cursor.visible = false;
@@ -145,7 +163,10 @@ public class GameManager : MonoBehaviour
 
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);
+        }
         Time.timeScale = 0f;
         currentMouseSensibility = fpc.RotationSpeed;
         fpc.RotationSpeed = 0f;

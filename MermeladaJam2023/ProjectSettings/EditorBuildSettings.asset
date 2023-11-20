@@ -9,23 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 82f62bcae9fb7a54f98c8f5cdf860fb5
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
-    guid: 707acc8dffb72b144bb1ffbe1c965f3d
+    path: Assets/Scenes/Museum/Guarda_garita.unity
+    guid: 722e64cfd818f074d9647bd74edcbd36
   - enabled: 1
-    path: Assets/Scenes/Museum/Carven_sala.unity
-    guid: 0b6964e122a441f4b96f9f665dc335cd
+    path: Assets/Scenes/Museum/Vestibulo.unity
+    guid: 0e43f6ea497ba8b4aaef8776c83d875c
   - enabled: 1
     path: "Assets/Scenes/Museum/Ba\xF1os_pasillo.unity"
     guid: 692e9e905700fea4ba11064a5580bffb
   - enabled: 1
-    path: Assets/Scenes/Museum/Guarda_garita.unity
-    guid: 722e64cfd818f074d9647bd74edcbd36
+    path: Assets/Scenes/Museum/Carven_sala.unity
+    guid: 0b6964e122a441f4b96f9f665dc335cd
   - enabled: 1
     path: Assets/Scenes/Museum/Sala_columnas.unity
     guid: e64bdc577f6b06a47b3cd08cb4ffcdd1
-  - enabled: 1
-    path: Assets/Scenes/Museum/Vestibulo.unity
-    guid: 0e43f6ea497ba8b4aaef8776c83d875c
   - enabled: 1
     path: Assets/Scenes/Museum/Salas_1-2.unity
     guid: 3663ee63b0001ed4b83040ed69d68b4d
