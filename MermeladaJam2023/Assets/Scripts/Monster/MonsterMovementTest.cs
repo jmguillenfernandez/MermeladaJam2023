@@ -9,6 +9,8 @@ public class MonsterMovementTest : MonoBehaviour
     public GameObject player;
 
     public Camera cam;
+    
+    public Mesh[] meshes;
 
     public float slowDownRange = 15;
 
@@ -26,6 +28,8 @@ public class MonsterMovementTest : MonoBehaviour
     RaycastHit hit;
     float dist;
     float distance;
+    MeshFilter meshFilter;
+    bool changedMesh = false;
 
     [Header("DEBUG")]
     public bool slipperyMonster = false;
@@ -34,6 +38,7 @@ public class MonsterMovementTest : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         col = GetComponent<Collider>();
+        meshFilter = GetComponent<MeshFilter>();
     }
 
     private void OnDrawGizmos()
@@ -75,6 +80,12 @@ public class MonsterMovementTest : MonoBehaviour
         return true;
     }
 
+    public void ChangeMesh()
+    {
+        meshFilter.mesh = meshes[Random.Range(0, meshes.Length - 1)];
+        changedMesh = true;
+    }
+
     void Update()
     {
         IsHiddenByObject();
@@ -105,12 +116,17 @@ public class MonsterMovementTest : MonoBehaviour
 
         if (IsVisible() || eyeState || IsHiddenByObject())
         {
+            if(!changedMesh)
+            {
+                ChangeMesh();
+            }
             agent.isStopped = false;
             agent.SetDestination(player.transform.position);
         }
         else
         {
             agent.isStopped = true;
+            changedMesh = false;
             if(!slipperyMonster)
             {
                 agent.velocity = Vector3.zero;
