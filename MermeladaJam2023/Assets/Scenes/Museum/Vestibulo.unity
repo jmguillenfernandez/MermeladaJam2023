@@ -1038,6 +1038,56 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 20.56
       objectReference: {fileID: 0}
+    - target: {fileID: 5232787071803580354, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071803580354, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 99.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071803580354, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071803580354, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071869074539, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071869074539, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 99.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071869074539, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787071869074539, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787073052074480, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232787073718636683, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5291612457367711440, guid: 9ce0aef7b4afb7e4985bada71288212e,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1102,6 +1152,96 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405815896760093, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816183210750, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816183210750, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816183210750, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816183210750, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816183210750, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMin
+      value: 0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816405446149, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816481091454, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816955606624, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816955606624, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816955606624, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816955606624, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405816955606624, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMin
+      value: 0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405817203087159, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405817203087159, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405817203087159, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405817203087159, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218405817203087159, guid: 9ce0aef7b4afb7e4985bada71288212e,
+        type: 3}
+      propertyPath: flickerSpeedMin
+      value: 0.149
       objectReference: {fileID: 0}
     - target: {fileID: 7547424513320396961, guid: 9ce0aef7b4afb7e4985bada71288212e,
         type: 3}

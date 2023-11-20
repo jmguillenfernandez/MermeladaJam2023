@@ -1631,6 +1631,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2246637334591537556, guid: b34f319c34bf0394f93fd13dd4a42aa1,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246637334591537556, guid: b34f319c34bf0394f93fd13dd4a42aa1,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246637334591537556, guid: b34f319c34bf0394f93fd13dd4a42aa1,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246637334591537556, guid: b34f319c34bf0394f93fd13dd4a42aa1,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.405
+      objectReference: {fileID: 0}
     - target: {fileID: 4643945143942601926, guid: b34f319c34bf0394f93fd13dd4a42aa1,
         type: 3}
       propertyPath: m_Name
