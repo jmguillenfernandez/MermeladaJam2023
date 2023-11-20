@@ -1919,6 +1919,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2679983124568008013, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3149466036919526698, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
         type: 3}
       propertyPath: m_Name
@@ -4791,7 +4796,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5baa0b03ef784f64c946dbb102fd5a1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5baa0b03ef784f64c946dbb102fd5a1b,
         type: 3}
@@ -13877,6 +13882,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679983124568008013, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
+        type: 3}
+      propertyPath: canFlicker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679983124568008013, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
+        type: 3}
+      propertyPath: flickerPercent
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679983124568008013, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
+        type: 3}
+      propertyPath: flickerCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679983124568008013, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
+        type: 3}
+      propertyPath: flickerSpeedMax
+      value: 0.313
       objectReference: {fileID: 0}
     - target: {fileID: 3149466036919526698, guid: 1daadf544c7dfd04ebd4eff2ef5bae7e,
         type: 3}
