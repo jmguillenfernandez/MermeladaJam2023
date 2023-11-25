@@ -646,6 +646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3848674407253308829, guid: 44eff4ad7ac60a94789c57aee30b2635,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3848674407253308831, guid: 44eff4ad7ac60a94789c57aee30b2635,
         type: 3}
       propertyPath: m_RootOrder
@@ -717,6 +722,7 @@ GameObject:
   - component: {fileID: 748375951}
   - component: {fileID: 748375953}
   - component: {fileID: 748375952}
+  - component: {fileID: 748375954}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -782,6 +788,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748375950}
   m_CullTransparentMesh: 1
+--- !u!95 &748375954
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748375950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0730c361cf1116418b23f8c04487b14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &856790523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1477,6 @@ GameObject:
   - component: {fileID: 1596884012}
   - component: {fileID: 1596884011}
   - component: {fileID: 1596884015}
-  - component: {fileID: 1596884014}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1533,37 +1558,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1596884014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596884010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1524337158
-      Data2: 1278211895
-      Data3: 1353575868
-      Data4: 429982186
-    Path: event:/Main Menu
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &1596884015
 MonoBehaviour:
   m_ObjectHideFlags: 0

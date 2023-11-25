@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -58,7 +59,12 @@ namespace StarterAssets
 		private float _speed;
 		private float _rotationVelocity;
 		private float _verticalVelocity;
-		private float _terminalVelocity = 53.0f;
+		private float _terminalVelocity = 53.0f;	
+		
+		//spawner
+		public Spawner spawner;
+		public float Tposicionamiento;
+	
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -73,6 +79,8 @@ namespace StarterAssets
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
+
+	
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -93,10 +101,16 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+			spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 		}
 
 		private void Start()
 		{
+			/*transform.position = spawner.CurrentSpawn.transform.position;
+			transform.rotation = spawner.CurrentSpawn.transform.rotation;*/
+		
+			StartCoroutine(TPosicionar());
+
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -106,15 +120,29 @@ namespace StarterAssets
 #endif
 
 			// reset our timeouts on start
-			_jumpTimeoutDelta = JumpTimeout;
+		_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+		}
+		IEnumerator TPosicionar()
+        {
+			yield return new WaitForSeconds(Tposicionamiento);
+			PosicionarPlayer();
+        }
+		public void PosicionarPlayer()
+        {
+			transform.position = spawner.CurrentSpawn.transform.position;
+			transform.rotation = spawner.CurrentSpawn.transform.rotation;
+		
 		}
 
 		private void Update()
 		{
-			JumpAndGravity();
-			GroundedCheck();
-			Move();
+			
+			
+				JumpAndGravity();
+				GroundedCheck();
+				Move();
+			
 		}
 
 		private void LateUpdate()

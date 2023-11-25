@@ -55,16 +55,37 @@ public class GameManager : MonoBehaviour
         Bloqueo = false;
 
        SceneManager.sceneLoaded += OnSceneLoaded;
-       fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+        GameObject playerCapsule = GameObject.Find("PlayerCapsule");
+        if(playerCapsule != null)
+        {
+            fpc = playerCapsule.GetComponent<FirstPersonController>();
+
+        }
+        else
+        {
+            Debug.Log("En esta escena no hay player");
+        }
+       
         Baal = GameObject.Find("SM_Monster"); 
-        Baal.SetActive(MonstruoActivo);
+        if(Baal != null)
+        { 
+            Baal.SetActive(MonstruoActivo);
+
+        }
+        else { Debug.Log("No hay demonios en esta escena"); }
+       
 
     }
    void OnSceneLoaded(Scene scene,LoadSceneMode mode)
     {
        fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
         Baal = GameObject.Find("SM_Monster");
-        Baal.SetActive(MonstruoActivo);
+        if (Baal != null)
+        {
+            Baal.SetActive(MonstruoActivo);
+
+        }
+        else { Debug.Log("No hay demonios en esta escena"); }
 
     }
     private void Update()
