@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Museum/MainMenu.unity
     guid: 82f62bcae9fb7a54f98c8f5cdf860fb5
   - enabled: 1
     path: Assets/Scenes/Museum/Guarda_garita.unity

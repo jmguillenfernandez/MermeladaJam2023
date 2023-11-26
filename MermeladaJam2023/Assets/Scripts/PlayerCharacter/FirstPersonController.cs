@@ -59,9 +59,10 @@ namespace StarterAssets
 		private float _speed;
 		private float _rotationVelocity;
 		private float _verticalVelocity;
-		private float _terminalVelocity = 53.0f;	
-		
+		private float _terminalVelocity = 53.0f;
+
 		//spawner
+		
 		public Spawner spawner;
 		public float Tposicionamiento;
 	
@@ -96,20 +97,24 @@ namespace StarterAssets
 
 		private void Awake()
 		{
+			_controller = GetComponent<CharacterController>();
+			_controller.enabled = false;
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
 			spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+			
 		}
 
 		private void Start()
 		{
 			/*transform.position = spawner.CurrentSpawn.transform.position;
 			transform.rotation = spawner.CurrentSpawn.transform.rotation;*/
-		
-			StartCoroutine(TPosicionar());
+
+			//StartCoroutine(TPosicionar());
+			PosicionarPlayer();
 
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
@@ -123,16 +128,13 @@ namespace StarterAssets
 		_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
 		}
-		IEnumerator TPosicionar()
-        {
-			yield return new WaitForSeconds(Tposicionamiento);
-			PosicionarPlayer();
-        }
+		
 		public void PosicionarPlayer()
         {
 			transform.position = spawner.CurrentSpawn.transform.position;
 			transform.rotation = spawner.CurrentSpawn.transform.rotation;
-		
+			_controller.enabled = true;
+
 		}
 
 		private void Update()

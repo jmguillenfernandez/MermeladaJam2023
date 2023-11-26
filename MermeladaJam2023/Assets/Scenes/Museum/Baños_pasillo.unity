@@ -1126,7 +1126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 65047876, guid: ab32a3cf9b376f140a21c4c318e302a7, type: 3}
       propertyPath: abierta
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65047876, guid: ab32a3cf9b376f140a21c4c318e302a7, type: 3}
       propertyPath: DestinoIndex
@@ -1134,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65047876, guid: ab32a3cf9b376f140a21c4c318e302a7, type: 3}
       propertyPath: puntoDeSpawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7182894024006403276, guid: ab32a3cf9b376f140a21c4c318e302a7,
         type: 3}
@@ -16467,6 +16467,10 @@ PrefabInstance:
     - target: {fileID: 65047876, guid: ab32a3cf9b376f140a21c4c318e302a7, type: 3}
       propertyPath: DestinoIndex
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 65047876, guid: ab32a3cf9b376f140a21c4c318e302a7, type: 3}
+      propertyPath: puntoDeSpawn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7182894024006403276, guid: ab32a3cf9b376f140a21c4c318e302a7,
         type: 3}
