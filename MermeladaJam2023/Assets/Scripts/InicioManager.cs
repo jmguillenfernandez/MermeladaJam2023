@@ -22,6 +22,6 @@ public class InicioManager : MonoBehaviour
     }
     public void Intro()
     {
-        GM.
+      
     }
 }
