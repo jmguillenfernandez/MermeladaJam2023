@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3848674407253308831
 Transform:
@@ -44,12 +44,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00a1ab2858967b4dbf3e12c172268af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TESTMODE: 1
+  TESTMODE: 0
   pauseMenuUI: {fileID: 0}
   fpc: {fileID: 0}
+  Menu:
+    m_Handle: 0
+  Vestibulo:
+    m_Handle: 0
+  "Ba\xF1os":
+    m_Handle: 0
+  SalaCarven:
+    m_Handle: 0
+  Garita:
+    m_Handle: 0
+  Columnas:
+    m_Handle: 0
+  Sotano:
+    m_Handle: 0
+  Salas:
+    m_Handle: 0
+  musicList:
+    tracks:
+    - ID: 0
+      Name: Main Menu music
+      AudioClip: {fileID: 8300000, guid: f6df1b86067e8fa4c90aea2aa6afc372, type: 3}
+    - ID: 1
+      Name: "Llamada tel\xE9fono"
+      AudioClip: {fileID: 8300000, guid: d605930eb0ea0494c8dc7bc3563c8c5f, type: 3}
+    - ID: 2
+      Name: Ruido Cuadro
+      AudioClip: {fileID: 8300000, guid: 7d0dc2474618c24439881dd502ff693c, type: 3}
+    - ID: 3
+      Name: "m\xFAsica tranqui"
+      AudioClip: {fileID: 8300000, guid: b5a931f5cfa25d447b9608a8fdd90132, type: 3}
+    - ID: 4
+      Name: Fx entrada sala Carven
+      AudioClip: {fileID: 8300000, guid: 945707a29a398e747af5b06fe11bc91f, type: 3}
+    - ID: 5
+      Name: "Fx  aparici\xF3n monstruo"
+      AudioClip: {fileID: 8300000, guid: 20062fc325a00aa489b6777dfb57752b, type: 3}
+    - ID: 6
+      Name: "Musica persecuci\xF3n"
+      AudioClip: {fileID: 8300000, guid: 93ad810e3b7baa24d831d69b5b24f5df, type: 3}
+    - ID: 7
+      Name: "Fx Cercan\xEDa1 Monstruo"
+      AudioClip: {fileID: 8300000, guid: f888424590e68894dac96dee0fb1c281, type: 3}
+    - ID: 8
+      Name: "Fx Cercan\xEDa 2 Monstruo"
+      AudioClip: {fileID: 8300000, guid: 91a3bc940591af24991c0e88f873b3f6, type: 3}
+    - ID: 9
+      Name: "Fx Cercan\xEDa 3 Monstruo"
+      AudioClip: {fileID: 8300000, guid: 22c1cc9f0136368478d671bbbf0c6e5e, type: 3}
   Bloqueo: 0
   puertasBloqueo:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  MonstruoActivo: 0
+  Baal: {fileID: 0}
+  Introterminada: 0
+  puntosdepawn: 0
