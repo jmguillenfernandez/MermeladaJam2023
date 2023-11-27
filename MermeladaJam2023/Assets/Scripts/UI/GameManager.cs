@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     [Header("MusicList")]
     public MusicList musicList;
+    AudioSource aus;
+    public AudioClip currentMusic;
 
     //MODO ALARMA
     public bool Bloqueo;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GameMan;
     private void Awake()
     {
+        aus = GetComponent<AudioSource>();
         if(GameMan != null)
         {
             Destroy(gameObject);
@@ -124,6 +127,21 @@ public class GameManager : MonoBehaviour
                 GoToMenu();
             }
         }
+    }
+
+    public void Intro()
+    {
+        AudioClip llamada = musicList.tracks[1].AudioClip;
+        aus.PlayOneShot(llamada);
+        
+        Introterminada = true;
+    }
+    public void FinDeLlamada()
+    {
+        currentMusic = musicList.tracks[3].AudioClip;
+        aus.clip = currentMusic;
+        aus.Play();
+        aus.loop = true;
     }
 
     #region Alarma
