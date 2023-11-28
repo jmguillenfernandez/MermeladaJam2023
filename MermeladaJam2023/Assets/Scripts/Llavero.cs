@@ -24,33 +24,34 @@ public class Llavero : MonoBehaviour
     {
         float scrollValue = Mouse.current.scroll.y.ReadValue();
 
-       
-        if (Mouse.current.rightButton.wasPressedThisFrame)
+        if (tengollavero == true)
         {
-            if (tengollavero == true)
-            { 
-                if(TutorialLlavero == true)
-                {
-                    TutruletaText.SetActive(true);
-                    TutsacarllavesText.SetActive(false);
-                }
-                anim.SetTrigger("Sacarllaves");
-                llaveactual = llaves[IDkey];
-                llaveInstanciada = Instantiate(llaveactual, llavesTransform);
-                llavesfuera = true;
-            }
-
-        }
-        else if (Mouse.current.rightButton.wasReleasedThisFrame)
-        {
-            if (TutorialLlavero == true)
+            if (Mouse.current.rightButton.wasPressedThisFrame)
             {
-                TutruletaText.SetActive(false);
-                TutsacarllavesText.SetActive(true);
+           
+                    if (TutorialLlavero == true)
+                    {
+                        TutruletaText.SetActive(true);
+                        TutsacarllavesText.SetActive(false);
+                    }
+                    anim.SetTrigger("Sacarllaves");
+                    llaveactual = llaves[IDkey];
+                    llaveInstanciada = Instantiate(llaveactual, llavesTransform);
+                    llavesfuera = true;
+                
+
             }
-            anim.SetTrigger("Guardarllaves");
-            Destroy(llaveInstanciada);
-            llavesfuera = false;
+            else if (Mouse.current.rightButton.wasReleasedThisFrame)
+            {
+                if (TutorialLlavero == true)
+                {
+                    TutruletaText.SetActive(false);
+                    TutsacarllavesText.SetActive(true);
+                }
+                anim.SetTrigger("Guardarllaves");
+                Destroy(llaveInstanciada);
+                llavesfuera = false;
+            }
         }
 
         if(llavesfuera == true)

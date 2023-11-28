@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject Baal;
 
     //EVENTOS
+    public GameObject Canvasinicio;
     public bool Introterminada;
 
     //TRANSICION
@@ -135,7 +136,11 @@ public class GameManager : MonoBehaviour
         aus.clip = currentMusic;
         aus.Play();
         aus.loop = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
+
+   
     #endregion
 
     #region Alarma

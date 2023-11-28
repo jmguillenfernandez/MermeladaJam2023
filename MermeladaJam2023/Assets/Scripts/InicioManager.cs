@@ -11,6 +11,8 @@ public class InicioManager : MonoBehaviour
     void Start()
     {
         //que se prohiba mover al player
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         CharCon.enabled = false;
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         if(GM.Introterminada == false)
@@ -28,12 +30,13 @@ public class InicioManager : MonoBehaviour
     }
     public void FinDeLlamada()
     {
+        GM.aus.Stop();
         canvasrender.SetActive(true);
         canvasintro.SetActive(false);
         CharCon.enabled = true;
         GM.FinDeLlamada();
 
-        //Que se permita moverse al player
+       
     }
     
 }
