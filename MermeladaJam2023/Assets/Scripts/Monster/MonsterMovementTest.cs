@@ -122,8 +122,9 @@ public class MonsterMovementTest : MonoBehaviour
             player.GetComponentInChildren<BlinkManager>().directEyeContact = true;
         }
 
-        if (IsVisible() || eyeState || IsHiddenByObject())
+        if (IsVisible() || eyeState || !IsHiddenByObject())
         {
+           // Debug.Log("No me ven porque IsVisible es " + IsVisible() + ", eyeState es " + eyeState + " y IsHiddenByObject es " + IsHiddenByObject());
             if(!changedMesh)
             {
                 ChangeMesh();
@@ -133,6 +134,7 @@ public class MonsterMovementTest : MonoBehaviour
         }
         else
         {
+            //Debug.Log("Me ven");
             agent.isStopped = true;
             changedMesh = false;
             if(!slipperyMonster)

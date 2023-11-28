@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9089758428270793434}
   - component: {fileID: 9089758428270793435}
   - component: {fileID: 9089758428270793436}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 9089758428280771083}
   - component: {fileID: 9089758428280771084}
   - component: {fileID: 9089758428280771085}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 9089758428482942459}
   - component: {fileID: 9089758428482942460}
   - component: {fileID: 9089758428482942458}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Evento de Colgar el cuadro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,6 +286,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   TiempoOscuro: 2
+  trueFrame: {fileID: 0}
+  puerta: {fileID: 0}
 --- !u!1 &9089758429669980806
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9089758429669980805}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pose1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9089758429731101606}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pose2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carven_MonsterPainting
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c8b4e7f8ddd304042b93c8d512286338,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

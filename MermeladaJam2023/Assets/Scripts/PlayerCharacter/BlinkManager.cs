@@ -44,7 +44,7 @@ public class BlinkManager : MonoBehaviour
     {
         if (directEyeContact && timeToBlink > minTimeToBlink)
         {
-            Debug.Log("Me están mirando y timeToBlink es de " + timeToBlink);
+            //Debug.Log("Me están mirando y timeToBlink es de " + timeToBlink);
             timeToBlink-=trueBlinkSpeedUpRate;
             if(timeToBlink<minTimeToBlink)
             {
@@ -65,8 +65,10 @@ public class BlinkManager : MonoBehaviour
 
     public IEnumerator HoldBlink()
     {
+        //Debug.Log("Ojo cerrado");
         isEyeClosed = true;
         yield return new WaitForSeconds(blinkTime);
+        //Debug.Log("Ojo abierto");
         isEyeClosed = false;
         animator.SetTrigger("Open");
         
