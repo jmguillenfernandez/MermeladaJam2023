@@ -96,6 +96,11 @@ MonoBehaviour:
     - ID: 9
       Name: "Fx Cercan\xEDa 3 Monstruo"
       AudioClip: {fileID: 8300000, guid: 22c1cc9f0136368478d671bbbf0c6e5e, type: 3}
+    - ID: 10
+      Name: Musica Final
+      AudioClip: {fileID: 8300000, guid: b3137c7536b5448479380c4562e36fb1, type: 3}
+  aus: {fileID: 0}
+  currentMusic: {fileID: 0}
   Bloqueo: 0
   puertasBloqueo:
   - {fileID: 0}
@@ -105,7 +110,7 @@ MonoBehaviour:
   MonstruoActivo: 0
   Baal: {fileID: 0}
   Introterminada: 0
-  puntosdepawn: 0
+  puntosdepawn: 1
 --- !u!82 &1070417132
 AudioSource:
   m_ObjectHideFlags: 0

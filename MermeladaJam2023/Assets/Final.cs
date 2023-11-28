@@ -24,6 +24,10 @@ public class Final : MonoBehaviour
         {
             if(GM.MonstruoActivo == true)
             {
+                GM.aus.Stop();
+
+                GM.aus.clip = GM.musicList.tracks[10].AudioClip;
+                GM.aus.Play();
                 SceneManager.LoadScene("Final");
 
             }

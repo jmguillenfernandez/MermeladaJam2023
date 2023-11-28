@@ -23,12 +23,12 @@ public class GameManager : MonoBehaviour
 
     [Header("MusicList")]
     public MusicList musicList;
-    AudioSource aus;
+    public AudioSource aus;
     public AudioClip currentMusic;
 
     //MODO ALARMA
     public bool Bloqueo;
-    public GameObject[] puertasBloqueo;
+
     public bool MonstruoActivo;
     public GameObject Baal;
 
@@ -96,14 +96,7 @@ public class GameManager : MonoBehaviour
         // Todo lo que esta en testmode es para que nosotros probemos cosas
         if (TESTMODE)
         {
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                Bloquear();
-            }
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                Desbloquear();
-            }
+           
         }
 
 
@@ -128,7 +121,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    #region Inicio
     public void Intro()
     {
         AudioClip llamada = musicList.tracks[1].AudioClip;
@@ -143,24 +136,18 @@ public class GameManager : MonoBehaviour
         aus.Play();
         aus.loop = true;
     }
+    #endregion
 
     #region Alarma
-    public void Bloquear()
+
+    public void Alarma()
     {
-        foreach (GameObject anim in puertasBloqueo)
-        {
-            anim.GetComponentInChildren<Animator>().SetTrigger("Cerrar");
-        }
         Bloqueo = true;
+        currentMusic = musicList.tracks[6].AudioClip;
+        aus.clip = currentMusic;
+        aus.Play();
     }
-    public void Desbloquear()
-    {
-        foreach (GameObject anim in puertasBloqueo)
-        {
-            anim.GetComponentInChildren<Animator>().SetTrigger("Abrir");
-        }
-        Bloqueo = false;
-    }
+   
     #endregion
 
     #region Bloqueo de control del jugador

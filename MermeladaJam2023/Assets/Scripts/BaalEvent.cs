@@ -11,6 +11,8 @@ public class BaalEvent : MonoBehaviour
     public float TiempoOscuro;
     public GameObject trueFrame;
     bool entered = false;
+    public Puerta puerta;
+    AudioSource ausB;
     // Start is called before the first frame update
 
     private void Awake()
@@ -20,6 +22,7 @@ public class BaalEvent : MonoBehaviour
 
     void Start()
     {
+        ausB = GetComponent<AudioSource>();
         pose1.SetActive(false);
         pose2.SetActive(false);
     }
@@ -36,8 +39,12 @@ public class BaalEvent : MonoBehaviour
             if (!entered)
             {
                 entered = true;
-                trueFrame.SetActive(false);
+                //trueFrame.SetActive(false);
                 CuadroAnimator.SetBool("empieza", true);
+                puerta.abierta = false;
+               
+                GM.Alarma();
+                   
             }
             
         }
@@ -61,6 +68,7 @@ public class BaalEvent : MonoBehaviour
     void Luz1()
     {
         //pose1
+        ausB.PlayOneShot(GM.musicList.tracks[5].AudioClip);
         foreach (GameObject luz in luces)
         {
             luz.SetActive(true);
@@ -130,7 +138,7 @@ public class BaalEvent : MonoBehaviour
 
         }
         baal.SetActive(true);
-        GM.Bloqueo = true;
+     
         GM.MonstruoActivo = true;
        
     }

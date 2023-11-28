@@ -26,7 +26,7 @@ public class ControlPuertas : MonoBehaviour
     {
         if(codigoIntroducido == codigoCorrecto)
         {
-            GM.Desbloquear();
+            //desbloquear puerta principal
         }
         else 
         { 
