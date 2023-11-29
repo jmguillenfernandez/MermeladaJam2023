@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3f9011c7c77f90f4d8e0ff84e42f070e,
         type: 3}
       propertyPath: m_Name
-      value: SM_Monster
+      value: SM_Monster Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3f9011c7c77f90f4d8e0ff84e42f070e,
         type: 3}
@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 8178950369455159560, guid: 61fc00174b1cc234aa55be25cb577286, type: 3}
   - {fileID: 5140600013900556880, guid: d68f31554a69cdc40a33695b06656bab, type: 3}
   slowDownRange: 15
+  killDistance: 3
   farSpeed: 25
   farAcceleration: 20
   nearSpeed: 15

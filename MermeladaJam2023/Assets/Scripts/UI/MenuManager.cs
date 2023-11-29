@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    //public GameObject pauseMenuUI;
 
     public FirstPersonController fpc;
 
@@ -51,7 +51,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -85,7 +85,7 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState= CursorLockMode.None;
         GameIsPaused = true;
-    }
+    }*/
 
     public void PlayGame()
     {

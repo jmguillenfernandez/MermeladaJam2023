@@ -16,6 +16,8 @@ public class MonsterMovementTest : MonoBehaviour
 
     public float slowDownRange = 15;
 
+    public float killDistance = 4.5f;
+
     [Header("Mobility values")]
     public float farSpeed = 40;
     public float farAcceleration = 20;
@@ -56,6 +58,8 @@ public class MonsterMovementTest : MonoBehaviour
             Debug.Log("Death");
             FindObjectOfType<GameManager>().Bloqueo = false;
             FindObjectOfType<GameManager>().MonstruoActivo = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(0);
     }
 
@@ -96,7 +100,7 @@ public class MonsterMovementTest : MonoBehaviour
 
         distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-        if (distance < 4.5f)
+        if (distance < killDistance)
         {
             Death();
         }
