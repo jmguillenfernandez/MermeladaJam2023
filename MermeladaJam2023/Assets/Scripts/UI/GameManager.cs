@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public bool MonstruoActivo;
     public GameObject Baal;
+    public string EscenaActual;
 
     //EVENTOS
     public GameObject Canvasinicio;
@@ -56,10 +57,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Bloqueo = false;
-
        SceneManager.sceneLoaded += OnSceneLoaded;
         GameObject playerCapsule = GameObject.Find("PlayerCapsule");
+       // Bloqueo = false;
         if(playerCapsule != null)
         {
             fpc = playerCapsule.GetComponent<FirstPersonController>();
@@ -70,10 +70,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("En esta escena no hay player");
         }
        
-        Baal = GameObject.Find("SM_Monster"); 
-        if(Baal != null)
-        { 
-            Baal.SetActive(MonstruoActivo);
+        Baal = GameObject.Find("SM_Monster");
+        EscenaActual = SceneManager.GetActiveScene().name;
+
+        if (Baal != null)
+        {
+            if (EscenaActual != "Baños_pasillo")
+            {
+                Baal.SetActive(MonstruoActivo);
+            }
+            else { Baal.SetActive(false); }
 
         }
         else { Debug.Log("No hay demonios en esta escena"); }
@@ -82,11 +88,28 @@ public class GameManager : MonoBehaviour
     }
    void OnSceneLoaded(Scene scene,LoadSceneMode mode)
     {
-       fpc = GameObject.Find("PlayerCapsule").GetComponent<FirstPersonController>();
+        aus = GetComponent<AudioSource>();
+        GameObject playerCapsule = GameObject.Find("PlayerCapsule");
+        if (playerCapsule != null)
+        {
+            fpc = playerCapsule.GetComponent<FirstPersonController>();
+
+        }
+        else
+        {
+            Debug.Log("En esta escena no hay player");
+        }
+
         Baal = GameObject.Find("SM_Monster");
+        EscenaActual = SceneManager.GetActiveScene().name;
+
         if (Baal != null)
         {
+            if (EscenaActual != "Baños_pasillo") 
+            { 
             Baal.SetActive(MonstruoActivo);
+            }
+            else { Baal.SetActive(false); }
 
         }
         else { Debug.Log("No hay demonios en esta escena"); }
@@ -128,10 +151,11 @@ public class GameManager : MonoBehaviour
         AudioClip llamada = musicList.tracks[1].AudioClip;
         aus.PlayOneShot(llamada);
         
-        Introterminada = true;
+        
     }
     public void FinDeLlamada()
-    {
+    {   
+        Introterminada = true;
         currentMusic = musicList.tracks[3].AudioClip;
         aus.clip = currentMusic;
         aus.Play();
@@ -148,6 +172,8 @@ public class GameManager : MonoBehaviour
     public void Alarma()
     {
         Bloqueo = true;
+        MonstruoActivo = true;
+        aus = GetComponent<AudioSource>();
         currentMusic = musicList.tracks[6].AudioClip;
         aus.clip = currentMusic;
         aus.Play();

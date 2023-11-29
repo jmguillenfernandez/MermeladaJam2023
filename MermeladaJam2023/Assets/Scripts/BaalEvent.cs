@@ -15,13 +15,11 @@ public class BaalEvent : MonoBehaviour
     AudioSource ausB;
     // Start is called before the first frame update
 
-    private void Awake()
-    {
-        GM = FindObjectOfType<GameManager>();
-    }
+   
 
     void Start()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         ausB = GetComponent<AudioSource>();
         pose1.SetActive(false);
         pose2.SetActive(false);
