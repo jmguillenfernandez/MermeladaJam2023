@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
-{
+{ 
+    public static GameManager GameMan;
 
     public bool TESTMODE;
 
 
     public GameObject pauseMenuUI;
     public FirstPersonController fpc;
+    
     private float currentMouseSensibility;
     private float currentPlayerSpeed;
     private float currentPlayerSprint;
@@ -40,24 +42,38 @@ public class GameManager : MonoBehaviour
     //TRANSICION
     public int puntosdepawn;
 
-    public static GameManager GameMan;
+   
     private void Awake()
     {
-        aus = GetComponent<AudioSource>();
-        if(GameMan != null)
+
+        /* if(GameMan != null)
+         {
+             Destroy(gameObject);
+         }
+         else
+         {
+             GameMan = this;
+         }
+         DontDestroyOnLoad(gameObject); */
+
+        if (GameMan == null)
         {
-            Destroy(gameObject);
+            GameMan = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            GameMan = this;
+            // Si ya existe una instancia, destruye este objeto para evitar duplicados
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+
+        aus = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
        SceneManager.sceneLoaded += OnSceneLoaded;
+
         GameObject playerCapsule = GameObject.Find("PlayerCapsule");
        // Bloqueo = false;
         if(playerCapsule != null)
@@ -69,7 +85,9 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("En esta escena no hay player");
         }
-       
+
+        aus = GetComponent<AudioSource>();
+
         Baal = GameObject.Find("SM_Monster");
         EscenaActual = SceneManager.GetActiveScene().name;
 
@@ -88,7 +106,7 @@ public class GameManager : MonoBehaviour
     }
    void OnSceneLoaded(Scene scene,LoadSceneMode mode)
     {
-        aus = GetComponent<AudioSource>();
+        Debug.Log("scene "+ scene.name +" loaded");
         GameObject playerCapsule = GameObject.Find("PlayerCapsule");
         if (playerCapsule != null)
         {
@@ -99,6 +117,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("En esta escena no hay player");
         }
+        aus = GetComponent<AudioSource>();
 
         Baal = GameObject.Find("SM_Monster");
         EscenaActual = SceneManager.GetActiveScene().name;
@@ -181,6 +200,24 @@ public class GameManager : MonoBehaviour
    
     #endregion
 
+    public void DeathGM()
+    {
+        Bloqueo = false;
+        MonstruoActivo = false;
+       
+        StartCoroutine(TiempoPostMuerte());
+    }
+
+    IEnumerator TiempoPostMuerte()
+    {
+        yield return new WaitForSeconds(7f);
+        PostMuerte();
+    }
+    public void PostMuerte()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     #region Bloqueo de control del jugador
     public void LockPlayer()
     {
@@ -210,10 +247,10 @@ public class GameManager : MonoBehaviour
     #region Pause
     public void Resume()
     {
-        if (pauseMenuUI != null)
+       /* if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(false);
-        }
+        }*/
         Time.timeScale = 1f;
         fpc.RotationSpeed = currentMouseSensibility;
         Cursor.visible = false;
@@ -223,10 +260,10 @@ public class GameManager : MonoBehaviour
 
     void Pause()
     {
-        if (pauseMenuUI != null)
+      /*  if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(true);
-        }
+        }*/
         Time.timeScale = 0f;
         currentMouseSensibility = fpc.RotationSpeed;
         fpc.RotationSpeed = 0f;

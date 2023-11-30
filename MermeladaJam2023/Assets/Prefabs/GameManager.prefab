@@ -102,15 +102,12 @@ MonoBehaviour:
   aus: {fileID: 0}
   currentMusic: {fileID: 0}
   Bloqueo: 0
-  puertasBloqueo:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   MonstruoActivo: 0
   Baal: {fileID: 0}
+  EscenaActual: 
+  Canvasinicio: {fileID: 0}
   Introterminada: 0
-  puntosdepawn: 1
+  puntosdepawn: 0
 --- !u!82 &1070417132
 AudioSource:
   m_ObjectHideFlags: 0

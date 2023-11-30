@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class MonsterMovementTest : MonoBehaviour
 {
+    public GameManager GM;
+
     public GameObject player;
 
     public Camera cam;
@@ -40,6 +42,7 @@ public class MonsterMovementTest : MonoBehaviour
 
     private void Awake()
     {
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         agent = GetComponent<NavMeshAgent>();
         col = GetComponent<Collider>();
         meshFilter = GetComponent<MeshFilter>();
@@ -55,12 +58,11 @@ public class MonsterMovementTest : MonoBehaviour
 
     public void Death()
     {
-            Debug.Log("Death");
-            FindObjectOfType<GameManager>().Bloqueo = false;
-            FindObjectOfType<GameManager>().MonstruoActivo = false;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
+         Debug.Log("Death"); 
+        player.GetComponent<VicenteScript>().VicenteMuerte();
+        GM.DeathGM();
+       
+           
     }
 
     private bool IsVisible()

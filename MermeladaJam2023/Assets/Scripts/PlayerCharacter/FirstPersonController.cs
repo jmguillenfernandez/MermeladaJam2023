@@ -110,10 +110,7 @@ namespace StarterAssets
 
 		private void Start()
 		{
-			/*transform.position = spawner.CurrentSpawn.transform.position;
-			transform.rotation = spawner.CurrentSpawn.transform.rotation;*/
-
-			//StartCoroutine(TPosicionar());
+			
 			PosicionarPlayer();
 
 			_controller = GetComponent<CharacterController>();

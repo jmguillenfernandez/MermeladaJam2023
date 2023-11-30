@@ -5,6 +5,10 @@ using UnityEngine;
 public class VicenteScript : MonoBehaviour
 {
     public Llavero llavero;
+
+    [Header("Muerte")]
+    public Animator animmuerte,animPanelMuerte;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +37,11 @@ public class VicenteScript : MonoBehaviour
             llavero.TutsacarllavesText.SetActive(true);
             Destroy(other.gameObject);
         }
+    }
+    public void VicenteMuerte()
+    {
+        animPanelMuerte.SetBool("muerto", true);
+        animmuerte.enabled = true;
+        
     }
 }
